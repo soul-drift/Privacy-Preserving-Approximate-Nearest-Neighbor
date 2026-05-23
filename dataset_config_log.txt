@@ -1,0 +1,81 @@
+================================sift================================================
+python run_exp.py 
+  --query_path "/home/ccy/ccy_documents/ppANN/ppann/data/sift_query.fvecs" 
+  --base_path "/home/ccy/ccy_documents/ppANN/ppann/data/sift_base.fvecs" 
+  --graph_path "/home/ccy/ccy_documents/ppANN/ppann/data/nsg_sift.txt"
+  --certainty_path "/home/ccy/ccy_documents/ppANN/ppann/data/sift_certainty_node_1.txt"
+  --gt_path "/home/ccy/ccy_documents/ppANN/ppann/data/sift_groundtruth.ivecs"
+  --dim 128
+  --total_nodes 1000000
+  --max_degree 50
+  --k 100
+  --l_search 200
+  --t_0 2000
+  --normal_shares 100
+  
+====================================gist============================================
+python run_exp.py 
+  --query_path "/data/dbr_documents/gist/gist_query.fvecs" 
+  --base_path "/data/dbr_documents/gist/gist_base.fvecs" 
+  --graph_path "/data/dbr_documents/gist/nsg_gist.txt"
+  --certainty_path "/data/dbr_documents/gist/gist_certainty_node_1.txt"
+  --gt_path "/data/dbr_documents/gist/gist_groundtruth.ivecs"
+  --dim 960
+  --total_nodes 1000000
+  --max_degree 70
+  --k 100
+  --l_search 200
+  --t_0 6000
+  --freq_path "/home/ccy/ccy_documents/ppANN/ppann/data/gist_cold_node_visit_freq.txt"
+====================================msmarco============================================
+--query_path /data/dbr_documents/msmarco/msmarco_query.fvecs 
+--base_path /data/dbr_documents/msmarco/msmarco_base_1m.fvecs 
+--graph_path /data/dbr_documents/msmarco/nsg_msmarco_1m.txt 
+--certainty_path /data/dbr_documents/msmarco/msmarco_certainty_node_1.txt 
+--gt_path /data/dbr_documents/msmarco/msmarco_groundtruth.ivecs 
+--dim 768 
+--total_nodes 1000000 
+--max_degree 150 
+--k 10 
+--l_search 200 
+--t_0 4000 
+--freq_path "/home/ccy/ccy_documents/ppANN/ppann/data/msmarco_cold_node_visit_freq.txt"
+====================================crawl============================================
+--query_path /data/dbr_documents/crawl/crawl_query.fvecs 
+--base_path /data/dbr_documents/crawl/crawl_base.fvecs 
+--graph_path /data/dbr_documents/crawl/nsg_crawl.txt 
+--certainty_path /data/dbr_documents/crawl/crawl_certainty_node_1.txt 
+--gt_path /data/dbr_documents/crawl/crawl_groundtruth.ivecs 
+--dim 300 
+--total_nodes 1989995 
+--max_degree 100 
+--k 100 
+--l_search 200 
+--t_0 3000 
+--freq_path "/home/ccy/ccy_documents/ppANN/ppann/data/crawl_cold_node_visit_freq.txt"
+====================================glove============================================
+--query_path /data/dbr_documents/glove/glove_query.fvecs 
+--base_path /data/dbr_documents/glove/glove_base.fvecs 
+--graph_path /data/dbr_documents/glove/nsg_glove.txt 
+--certainty_path /data/dbr_documents/glove/glove_certainty_node_1.txt 
+--gt_path /data/dbr_documents/glove/glove_groundtruth.ivecs 
+--dim 100 
+--total_nodes 1183514 
+--max_degree 100 
+--k 100 
+--l_search 200 
+--t_0 16000 
+--freq_path "/home/ccy/ccy_documents/ppANN/ppann/data/glove_cold_node_visit_freq.txt"
+====================================msong============================================
+--query_path /data/dbr_documents/msong/msong_query.fvecs 
+--base_path /data/dbr_documents/msong/msong_base.fvecs 
+--graph_path /data/dbr_documents/msong/nsg_msong.txt 
+--certainty_path /data/dbr_documents/msong/msong_certainty_node_1.txt 
+--gt_path /data/dbr_documents/msong/msong_groundtruth.ivecs 
+--dim 420 
+--total_nodes 992272 
+--max_degree 100 
+--k 20 
+--l_search 200 
+--t_0 1500 
+--freq_path "/home/ccy/ccy_documents/ppANN/ppann/data/msong_cold_node_visit_freq.txt"

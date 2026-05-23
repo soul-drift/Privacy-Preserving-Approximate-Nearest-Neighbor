@@ -1,0 +1,10 @@
+[package]
+name = "ppann"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+byteorder = "1.5.0"
+xxhash-rust = { version = "0.8.12", features = ["xxh3"] }
+rand = { version = "0.8", features = ["small_rng"] }
+rayon = "1.8"
