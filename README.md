@@ -105,14 +105,14 @@ The arguments used in the command above cover two main categories: **File Paths*
 
 #### `obli_routing`
 
-The main graph search routine. It maintains:
+The main search routine. It maintains:
 
 - a min-heap queue for candidate expansion;
 - a max-heap result pool of size `L`;
 - a visited bitmap `expo`;
 - a fixed routing budget `t_0`.
 
-The first `15%` of the routing budget uses `UnifiedPool::get`; the remaining `85%` uses `UnifiedPool::get_normal_only`. Nodes with unknown distances are inserted with `dist = -1.0`, then evaluated when popped from the queue.
+Nodes with unknown distances are inserted with `dist = -1.0`, then evaluated when popped from the queue.
 
 ---
 
