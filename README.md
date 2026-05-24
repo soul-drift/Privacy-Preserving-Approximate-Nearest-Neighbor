@@ -70,11 +70,11 @@ $ python run_exp.py \
    --t_0 T_0
 ```
 
-## Detailed Parameter Description
+#### Detailed Parameter Description
 
 The arguments used in the command above cover two main categories: **File Paths** and **System Hyperparameters**.
 
-### File Path Parameters
+#### File Path Parameters
 
 - **`--query_path`**: Query dataset path. Specifies the query vector file in `fvecs` format (e.g., `sift_query.fvecs`).
 - **`--base_path`**: Base vector set path. Specifies the base gallery vector file in `fvecs` format (e.g., `sift_base.fvecs`).
@@ -83,7 +83,7 @@ The arguments used in the command above cover two main categories: **File Paths*
 - **`--gt_path`**: Ground Truth file path. Specifies the ground truth file in `ivecs` format, used for evaluating the final Recall.
 - **`--freq_path`**: Offline node access frequency file path. Specifies the text file containing warm-up frequency data, used for the frequency-adaptive replica allocation mechanism.
 
-### Model & System Hyperparameters
+#### Model & System Hyperparameters
 
 - **`--dim`**: Vector dimension. For example, SIFT is typically `128`, and GIST is `960`. The script automatically updates all array length definitions in the Rust code based on this parameter.
 - **`--total_nodes`**: Total number of base vectors. For example, `1000000` for SIFT1M. This parameter determines the memory allocation size for the deduplication array (visited bitmap).
@@ -92,7 +92,7 @@ The arguments used in the command above cover two main categories: **File Paths*
 - **`--l_search`**: Candidate search queue length. The size of the candidate pool maintained during graph traversal. Configured to `200` in the example.
 - **`--t_0`**: The fixed routing number. Configured to `2000` in the example.
 
-### Notes
+#### Notes
 
 1. **Code Modification Backup**: Because this script uses regular expressions to **directly overwrite** the Rust source files in the `src/` directory, it is highly recommended to commit your code to a Git repository before use to prevent unexpected replacements from corrupting your code.
 2. **Compilation Environment**: The script will automatically invoke `cargo run --release` with the `-C target-cpu=native` flag enabled for compilation optimization. Please ensure that a Nightly Rust toolchain with SIMD support is correctly installed in your running environment.
